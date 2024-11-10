@@ -1,0 +1,54 @@
+"use strict";
+let myName = document.getElementById("name");
+let desig = document.getElementById("Designation");
+let phone = document.getElementById("Phone");
+let email = document.getElementById("email");
+let add = document.getElementById("add");
+let pass = document.getElementById("pass");
+let qualification = document.getElementById("qualification");
+let uni = document.getElementById("uni");
+let skill1 = document.getElementById("skill1");
+let skill2 = document.getElementById("skill2");
+let skill3 = document.getElementById("skill3");
+let styear = document.getElementById("styear");
+let endyear = document.getElementById("endyear");
+let comp = document.getElementById("comp");
+let comploc = document.getElementById("comploc");
+let job = document.getElementById("job");
+let achieve1 = document.getElementById("achieve1");
+let achieve2 = document.getElementById("achieve2");
+let achieve3 = document.getElementById("achieve3");
+let submitBtn = document.getElementById('submit-btn');
+let pic = document.getElementById('pic');
+let form = document.getElementById('form');
+form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    localStorage.setItem("name", myName.value);
+    localStorage.setItem("desig", desig.value);
+    localStorage.setItem("phone", phone.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("add", add.value);
+    localStorage.setItem("pass", pass.value);
+    localStorage.setItem("qualification", qualification.value);
+    localStorage.setItem("uni", uni.value);
+    localStorage.setItem("skill1", skill1.value);
+    localStorage.setItem("skill2", skill2.value);
+    localStorage.setItem("skill3", skill3.value);
+    localStorage.setItem("styear", styear.value);
+    localStorage.setItem("endyear", endyear.value);
+    localStorage.setItem("comp", comp.value);
+    localStorage.setItem("comploc", comploc.value);
+    localStorage.setItem("job", job.value);
+    localStorage.setItem("achieve1", achieve1.value);
+    localStorage.setItem("achieve2", achieve2.value);
+    localStorage.setItem("achieve3", achieve3.value);
+    if (pic.files && pic.files[0]) {
+        let reader = new FileReader();
+        reader.addEventListener("load", () => {
+            let textImg = reader.result;
+            localStorage.setItem("profile_pic", textImg);
+        });
+        reader.readAsDataURL(pic.files[0]);
+    }
+    window.location.href = "resume/resume.html";
+});

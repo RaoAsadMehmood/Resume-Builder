@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume builder</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <div class="resume_div">
+        <header>
+            <div>
+                <h1 class="white">
+            <span id="resName"></span>
+                </h1>
+                <p class="white"><span id="resDesig"></span></p>
+            </div>
+            <img id="resImg" src="WhatsApp Image 2024-11-08 at 11.12.42_8710f948.jpg" alt="Picture not foundl">
+        </header>
+        <div class="content">
+            <aside>
+                <section id="contact" class = "contact">
+                    <h2>Contact</h2>
+                    <p> <strong>Phone number</strong></p>
+                    <p><span id="resPhone"></span>  </p> <br>
+                    <p><strong> Email address</strong></p>
+                    <p><span id="resEmail"></span></p> <br>
+                    <p><strong> Address </strong></p>
+                    <p><span id="resAddress"></span></p>
+                </section>
+                <section id="Education" class="Education">
+                    <h2>Education</h2>
+                    <p><span id="resPass"></span></p>
+                    <p> <strong><span id="resDegree"></span></strong></p>
+                    <p><span id="resIns"></span></p> <br>
+                    <p><span id="resPass2"></span>
+                    </p>
+                    <p> <strong><span id="resdeg">  </span> </strong></p>
+                    <p> <span id="resIns2"> </span> </p>
+                </section>
+                <section id="skills" class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li><span id="resSkill1"></span></li>
+                        <li> <span id="resSkill2"></span></li>
+                        <li> <span id="resSkill3"></span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="main_content">
+                <section id="experience" class="experience">
+                    <h2>Experience</h2>
+                    <div class="experience_items">
+                        <p> <span id="resStartyear"></span></p>
+                        <p> <span id="resEndYear"></span></p>
+                        <p> <strong> <span id="resCompany"></span> | <span id="resCompLoc"></span> </strong> </p>
+                        <p><span id="resJob"></span></p>
+                        <ul>
+                            <li><span id="resAcheive1"></span></li>
+                            <li><span id="resAcheive2"></span></li>
+                            <li><span id="resAcheive3"></span></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="experience_items">
+                        <p>2020-2 024</p>
+                        <p> <strong>XYZ pvt limited | Karachi</strong> </p>
+                        <p>ABC Developer</p>
+                        <ul>
+                            <li>Developed new features</li>
+                            <li>Implemented new features</li>
+                            <li>Debugged existing code</li>
+                        </ul>
+                    </div> -->
+                    <!-- <div class="experience_items">
+                        <p>2020-2024</p>
+                        <p> <strong>XYZ pvt limited | Karachi</strong> </p>
+                        <p>ABC Developer</p>
+                        <ul>
+                            <li>Developed new features</li>
+                            <li>Implemented new features</li>
+                            <li>Debugged existing code</li>
+                        </ul>
+                    </div> -->
+                </section>
+                <section id="ref" class="reference">
+                    <h2>Reference</h2>
+                    <p>Available upon request</p>
+
+                </section>
+
+
+            </main>
+        </div>
+    </div>
+    <div class="btn_div">
+        <!-- <button id="ref_btn" class="btn">Reference</button>
+        <button id="edu_btn" class="btn">Education</button>
+        <button id="skill_btn" class="btn">Skills</button>
+        <button id="cont_btn" class="btn">Contact</button>
+        <button id="exp_btn" class="btn">Experience</button> -->
+        <button id="print_btn" class="btn">Print</button>
+    </div>
+    <script src="resume.js"></script>
+</body>
+
+</html>
