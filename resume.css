@@ -114,7 +114,7 @@
   @media  (max-width: 786px){
   .content {
     flex-direction: column;
-    /* background-color: aqua; */
+    background-color: aqua;
     width: 100%;
     text-align: left;
   

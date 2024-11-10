@@ -21,6 +21,8 @@ window.addEventListener('load', () => {
     let achieve3 = localStorage.getItem("achieve3")
     let picture = localStorage.getItem("profile_pic")
 
+    console.log( picture)
+
     
     let resName: any = document.getElementById('resName')
     resName.textContent = name

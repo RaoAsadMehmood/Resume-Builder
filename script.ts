@@ -79,5 +79,5 @@ form?.addEventListener('submit', (e) => {
         reader.readAsDataURL(pic.files[0])
     }
 
-    window.location.href = "resume/resume.html"
+    window.location.href = "resume.html"
 })

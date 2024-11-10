@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
     let achieve2 = localStorage.getItem("achieve2");
     let achieve3 = localStorage.getItem("achieve3");
     let picture = localStorage.getItem("profile_pic");
+    console.log(picture);
     let resName = document.getElementById('resName');
     resName.textContent = name;
     let resDesig = document.getElementById('resDesig');
