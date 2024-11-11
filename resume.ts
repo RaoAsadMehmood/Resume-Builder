@@ -1,6 +1,5 @@
+let myName = localStorage.getItem("name")
 window.addEventListener('load', () => {
-    let name = localStorage.getItem("name")
-    //    console.log(name)
     let desig = localStorage.getItem("desig")
     let phone = localStorage.getItem("phone")
     let email = localStorage.getItem("email")
@@ -21,11 +20,9 @@ window.addEventListener('load', () => {
     let achieve3 = localStorage.getItem("achieve3")
     let picture = localStorage.getItem("profile_pic")
 
-    console.log( picture)
 
-    
     let resName: any = document.getElementById('resName')
-    resName.textContent = name
+    resName.textContent = myName
 
     let resDesig: any = document.getElementById('resDesig')
     resDesig.textContent = desig
@@ -68,16 +65,16 @@ window.addEventListener('load', () => {
 
     let resCompLoc: any = document.getElementById('resCompLoc')
     resCompLoc.textContent = comploc
-    
+
     let resJob: any = document.getElementById('resJob')
     resJob.textContent = job
-    
+
     let resAcheive1: any = document.getElementById('resAcheive1')
     resAcheive1.textContent = achieve1
-    
+
     let resAcheive2: any = document.getElementById('resAcheive2')
     resAcheive2.textContent = achieve2
-    
+
     let resAcheive3: any = document.getElementById('resAcheive3')
     resAcheive3.textContent = achieve3
 
@@ -90,5 +87,42 @@ window.addEventListener('load', () => {
 
 let print_btn = document.getElementById('print_btn')
 print_btn?.addEventListener('click', () => {
-window.print()
+    window.print()
+})
+
+
+
+// -----------Edit_button--------------
+let edit_btn = document.getElementById('edit_btn')
+let anc = document.getElementById('anc')
+
+edit_btn?.addEventListener('click', () => {
+    window.history.back()
+})
+
+// -----------Share_button--------------
+let share_btn = document.getElementById('share_btn')
+let userName;
+if (myName) {
+    userName = myName.toLowerCase().replace(/\s+/g, '-')
+} else {
+    userName = 'user'
+}
+
+let baseUrl  = "http://127.0.0.1:5500/resume.html";
+let uniqueUrl = `${baseUrl}?/${myName}`
+
+share_btn?.addEventListener('click', () => {
+anc?.setAttribute('href',uniqueUrl)
+})
+
+// -----------copy_button--------------
+let copy_btn = document.getElementById('copy_btn')
+
+copy_btn?.addEventListener('click', () => {
+    navigator.clipboard.writeText(uniqueUrl).then(() => {
+        alert("Copied to clipboard")
+    })    
+
+
 })

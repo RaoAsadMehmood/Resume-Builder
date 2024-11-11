@@ -1,7 +1,6 @@
 "use strict";
+let myName = localStorage.getItem("name");
 window.addEventListener('load', () => {
-    let name = localStorage.getItem("name");
-    //    console.log(name)
     let desig = localStorage.getItem("desig");
     let phone = localStorage.getItem("phone");
     let email = localStorage.getItem("email");
@@ -21,9 +20,8 @@ window.addEventListener('load', () => {
     let achieve2 = localStorage.getItem("achieve2");
     let achieve3 = localStorage.getItem("achieve3");
     let picture = localStorage.getItem("profile_pic");
-    console.log(picture);
     let resName = document.getElementById('resName');
-    resName.textContent = name;
+    resName.textContent = myName;
     let resDesig = document.getElementById('resDesig');
     resDesig.textContent = desig;
     let resPhone = document.getElementById('resPhone');
@@ -67,4 +65,31 @@ window.addEventListener('load', () => {
 let print_btn = document.getElementById('print_btn');
 print_btn?.addEventListener('click', () => {
     window.print();
+});
+// -----------Edit_button--------------
+let edit_btn = document.getElementById('edit_btn');
+let anc = document.getElementById('anc');
+edit_btn?.addEventListener('click', () => {
+    window.history.back();
+});
+// -----------Share_button--------------
+let share_btn = document.getElementById('share_btn');
+let userName;
+if (myName) {
+    userName = myName.toLowerCase().replace(/\s+/g, '-');
+}
+else {
+    userName = 'user';
+}
+let baseUrl = "http://127.0.0.1:5500/resume.html";
+let uniqueUrl = `${baseUrl}?/${myName}`;
+share_btn?.addEventListener('click', () => {
+    anc?.setAttribute('href', uniqueUrl);
+});
+// -----------copy_button--------------
+let copy_btn = document.getElementById('copy_btn');
+copy_btn?.addEventListener('click', () => {
+    navigator.clipboard.writeText(uniqueUrl).then(() => {
+        alert("Copied to clipboard");
+    });
 });

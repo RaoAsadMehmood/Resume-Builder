@@ -51,3 +51,19 @@ form {
     margin-bottom: 20px;
 }
  
+.submit_btn input{
+    font: bold;
+    font-size: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color:#0FA6FB ;
+    
+    &:hover{
+  background: #067dc2;
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+}
